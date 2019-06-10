@@ -1,7 +1,12 @@
 function formSubmit() {
   var signupForm = document.getElementById("bonus-offer-code");
+  //var signupRoute = signupForm.action;
   signupForm.addEventListener("submit", function(event) {
-    event.preventDefault();
+    if (this.dataset.formready) {
+      this.dataset.formready = false;
+    } else {
+      event.preventDefault();
+    }
     var elements = signupForm.querySelectorAll('[data-required="true"]');
     var invalidFields = false;
 
@@ -17,7 +22,8 @@ function formSubmit() {
     });
     if (!invalidFields) {
       // if all required fields pass validation, move on.
-      showConfirmation();
+      this.dataset.formready = true;
+      signupForm.submit();
     }
   });
 }

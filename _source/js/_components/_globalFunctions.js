@@ -4,7 +4,6 @@ function validationCheck(ele, rules, value) {
   var rule = rules.split("|");
   var rulename = rule[0];
   var rulevalue = rule[1];
-  console.log(ele, rules, value);
 
   switch (rulename) {
     case "length":
@@ -40,10 +39,5 @@ function validationCheck(ele, rules, value) {
   }
 }
 function showConfirmation() {
-  var landingPage = document.getElementById("landing-page");
-  var confirmationPage = document.getElementById("confirmation-page");
-
-  landingPage.classList.add("hidden");
-  confirmationPage.classList.remove("hidden");
   window.scrollTo({ top: 0, behavior: "smooth" });
 }

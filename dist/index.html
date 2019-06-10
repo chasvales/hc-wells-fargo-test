@@ -16,52 +16,6 @@
 	<header id="primary-header" role="banner">
 		<div class="container"><a href="https://www.wellsfargo.com/" id="primary-logo" target="_blank"></a></div>
 	</header>
-	<section id="confirmation-page" class="container confirmation-page hidden">
-		<section class="hero">
-			<h4 class="headline headline-4">%_FirstName% %_LastName%, here is your offer code: XXXXXXX</h4>
-		</section>
-		<div class="container">
-			<section><p>We’ve also emailed your code to: %_email address_%</p>
-			<p><strong>Unique bonus offer code can only be used once.</strong></p>
-			<h1 class="headline headline-3 h-color-primary">Follow all of the steps below to receive your $300 bonus.<a
-					href="#disclaimer-1" class="h-text-inherit"><sup>1</sup></a></h1>
-			<h3 class="headline headline-3 h-color-primary">This offer ends December 31, 2018.</h3>
-			</section>
-			<section>
-				<div class="confirmation-page__steps">
-					<div class="confirmation-page__steps--item">
-						<span class="account--bonus-icon icon bonus-code"></span>
-						<article class="confirmation-page__steps--item-copy">
-						 <p class="headline headline-4">1. Visit one of our branches located near you and bring the <a href="https://www.wellsfargo.com/biz/required-documents" target="_blank">required business documents</a> to open a new business checking account by December 31, 2018.</p>
-						 <span class="footnote">You’ll need the unique bonus offer code — shown above and also found on your confirmation email.</span>
-						 <div class="make-appointment-container">
-							 <a href="https://appointments.wellsfargo.com/maa/appointment/?srcType=mkt&assistType=business" target="_blank" class="make-appointment"><span>Make an Appointment ></span></a>
-							 <p>Make an appointment with a banker today at <a href="https://appointments.wellsfargo.com/maa/appointment/?srcType=mkt&assistType=business" target="_blank">wellsfargo.com/appointments</a>, or <a href="https://www.wellsfargo.com/locator/" target="_blank">visit a branch near you</a>, or call 1-800-416-8658, Monday through Friday 8:00am – 8:00pm Central Time to speak with one of our Small Business Advocates.</p>
-						 </div>
-						</article>
-					</div>
-					<div class="confirmation-page__steps--item">
-						<span class="account--bonus-icon icon deposit"></span>
-						<article class="confirmation-page__steps--item-copy">
-							<p class="headline headline-4">2. Make a deposit</p>
-							<p>Fund your new business checking account with a minimum opening deposit of $25.</p>
-						</article>
-					</div>
-					<div class="confirmation-page__steps--item">
-						<span class="account--bonus-icon icon requirements"></span>
-						<article class="confirmation-page__steps--item-copy">
-							<p class="headline headline-4">3. Meet all offer requirements.<a href="#disclaimer-1" class="h-text-inherit"><sup>1</sup></a></p>
-							<ul class="h-no-margin">
-								<li>Within 10 days of opening your account, deposit $1,000 or more into the new business checking account, <strong>and</strong></li>
-								<li>Have a $1,000 minimum balance in your account on Day 60, <strong>and</strong></li>
-								<li>Make 5 or more qualifying transactions that have posted to the new business checking account by Day 60.</li>
-							</ul>
-						</article>
-					</div>
-				</div>
-			</section>
-		</div>
-	</section>
 	<section id="landing-page" role="main">
 		<section class="hero container">
 			<div class="hero--image"><img src="images/hero-image.jpg" class="h-image-scale-width"></div>
@@ -187,7 +141,7 @@
 						<span class="account--bonus-icon icon bonus-code"></span>
 						<p><strong>Get a bonus offer code.</strong></p>
 						<p>Enter your information below to receive your unique offer code.</p>
-						<form id="bonus-offer-code" action="#">
+						<form id="bonus-offer-code" action="confirmation.html" method="GET">
 							<div class="two-column-input">
 								<input type="text" id="firstname" name="firstname" value="" tabindex="0" placeholder="First Name" data-required="true" data-rule="length|2" />
 								<input type="text" id="lastname" name="lastname" value="" tabindex="0" placeholder="Last Name" data-required="true" data-rule="length|2" />

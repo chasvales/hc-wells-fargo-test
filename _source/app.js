@@ -4,7 +4,6 @@ function validationCheck(ele, rules, value) {
   var rule = rules.split("|");
   var rulename = rule[0];
   var rulevalue = rule[1];
-  console.log(ele, rules, value);
 
   switch (rulename) {
     case "length":
@@ -40,11 +39,6 @@ function validationCheck(ele, rules, value) {
   }
 }
 function showConfirmation() {
-  var landingPage = document.getElementById("landing-page");
-  var confirmationPage = document.getElementById("confirmation-page");
-
-  landingPage.classList.add("hidden");
-  confirmationPage.classList.remove("hidden");
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 var Modal = function() {
@@ -86,8 +80,13 @@ var removeActiveModal = function() {
 };
 function formSubmit() {
   var signupForm = document.getElementById("bonus-offer-code");
+  //var signupRoute = signupForm.action;
   signupForm.addEventListener("submit", function(event) {
-    event.preventDefault();
+    if (this.dataset.formready) {
+      this.dataset.formready = false;
+    } else {
+      event.preventDefault();
+    }
     var elements = signupForm.querySelectorAll('[data-required="true"]');
     var invalidFields = false;
 
@@ -103,7 +102,8 @@ function formSubmit() {
     });
     if (!invalidFields) {
       // if all required fields pass validation, move on.
-      showConfirmation();
+      this.dataset.formready = true;
+      signupForm.submit();
     }
   });
 }
