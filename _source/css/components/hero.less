@@ -1,0 +1,27 @@
+.hero{
+    &--content{
+        padding: 30px 0;
+        background-color: #e2e7ea;
+        text-align: center;
+
+        .container{
+            padding: 0 30px;
+        }
+    }
+    &--image{
+        margin-bottom: -5px;
+        background-color: #e2e7ea;
+    }
+    @media @small_breakpoint{
+        display: flex;
+        flex-wrap: wrap;
+
+        &--image{
+            margin-bottom: 0;
+        }
+        &--content{
+            width: ~"calc(100% - 486px)";
+            padding: 65px 30px;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.confirmation-page {
+  .hero {
+    background-color: #434343;
+    color: white;
+    padding: 50px 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: @gutter;
+
+    @media @small_breakpoint {
+      padding: 50px 0;
+    }
+    + .container {
+      padding: 0 @gutter;
+    }
+
+    .headline {
+      margin-bottom: 0;
+    }
+  }
+  &__steps {
+    padding: 50px 0;
+
+    &--item {
+      display: block;
+      padding: @gutter 0;
+      border-bottom: 1px solid #e0e3e2;
+
+      @media @small_breakpoint {
+        display: flex;
+      }
+      .account--bonus-icon {
+        margin: 0 0 20px 0;
+
+        @media @small_breakpoint {
+          margin: 0 auto;
+        }
+      }
+
+      &-copy {
+        width: 92%;
+        min-width: 300px;
+        padding-left: 3%;
+      }
+    }
+  }
+}
+.make-appointment-container {
+  margin: @gutter 0;
+  display: block;
+
+  @media @small_breakpoint {
+    display: flex;
+  }
+}

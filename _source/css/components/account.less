@@ -1,0 +1,108 @@
+.account{
+    &--types{
+        padding: 40px 0;
+    }
+    &--item{
+        padding: 40px 0;
+        border-bottom: 2px solid #c8d1d7;
+        position: relative;
+
+        &:last-child{
+            border-bottom: none;
+        }
+
+        &-headline{
+            padding-right: 35%;
+            margin-bottom: 20px;
+        }
+        p{
+            margin-bottom: 15px;
+        }
+    }
+    &--bonus{
+        padding: 40px 0;
+        background-color: #f7f7f7;
+
+        &-headline{
+            margin: 0 25px;
+            background-color: #f7f7f7;
+            text-align: center;
+            display: block;
+            position: relative;
+            z-index: 1;
+            padding: 0 5px;
+        }
+        &-section-line{
+            height: 2px;
+            background-color: @color_primary;
+            top: 18px;
+            width: 100%;
+            display: block;
+            position: absolute;
+            z-index: 0;
+        }
+        &-icon{
+            height: 80px;
+            width: 80px;
+            background-color: @color_primary;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 20px auto;
+            display: block;
+            position: relative;
+        }
+    }
+    @media @medium_breakpoint{
+        &--container{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        &--bonus{
+            .section-headline{
+                text-align: center;
+            }
+            &-headline{
+                margin: 0 auto;
+                display: inline-block;
+                padding: 0 20px;
+            }
+            &-steps{
+                display: flex;
+            }
+            &-item{
+                width: 25%;
+                padding: 0 20px;
+
+                &:first-child{
+                    padding-left: 0;
+                }
+                &:last-child{
+                    padding-right: 0;
+                }
+            }
+        }
+        &--item{
+            border-right: 1px solid #c8d1d7;
+            border-bottom: none;
+            padding: 0 30px;
+            width: 33%;
+
+            &:first-child{
+                padding-left: 0;
+            }
+            &:last-child{
+                padding-right: 0;
+                border-right: 0;
+            }
+            .badge{
+                right: 40px;
+                top: 0;
+            }
+        }
+    }
+}
+.section-headline{
+    position: relative;
+}

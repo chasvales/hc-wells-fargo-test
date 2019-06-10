@@ -1,0 +1,49 @@
+.button {
+  border-radius: 0;
+  background-color: @color_primary;
+  color: #fff;
+  line-height: 35px;
+  padding: 0 20px;
+  position: relative;
+  text-transform: capitalize;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+  font-size: inherit;
+  border: none;
+}
+.make-appointment {
+  color: @color_primary;
+  display: flex;
+  text-decoration: none;
+  margin-bottom: @gutter;
+
+  @media @small_breakpoint {
+    margin-bottom: 0;
+  }
+  &:before {
+    content: "";
+    background-image: url(../images/icon-make-appointment.png);
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 45px;
+    display: block;
+    background-size: cover;
+
+    @media @small_breakpoint {
+      height: 45px;
+      width: 65px;
+    }
+  }
+  span {
+    border: 1px solid @color_primary;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    height: 45px;
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+sup {
+  font-size: 65%;
+  line-height: 1;
+  a {
+    color: inherit;
+  }
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: @color_text;
+
+  @media @medium_breakpoint {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+a {
+  text-decoration: underline;
+  color: #3d62ac;
+  display: inline-block;
+}
+p {
+  margin-bottom: @gutter;
+}
+strong {
+  font-weight: bold;
+}
+ul {
+  padding-left: 15px;
+  margin-top: -10px;
+
+  &.list-dash {
+    li {
+      list-style-type: none;
+
+      &:before {
+        content: "-";
+        text-indent: 10px;
+        margin-left: -15px;
+        margin-right: 10px;
+      }
+    }
+  }
+  li {
+    list-style-type: disc;
+    margin-bottom: @gutter;
+
+    &.nested {
+      list-style: none;
+    }
+  }
+  ul {
+    margin-top: 0;
+  }
+}
+input {
+  width: 100%;
+  border: 1px solid #afafaf;
+  padding: 0 10px;
+  height: 30px;
+  margin-bottom: 5px;
+
+  &.error {
+    border-color: @color_primary;
+  }
+}
+.container {
+  width: 100%;
+  padding: 0 20px;
+
+  @media @small_breakpoint {
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+.flex-wrapper {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
